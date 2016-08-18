@@ -7,11 +7,19 @@
 
 <body>
 
-<breadcrumbs></breadcrumbs>
+
+<div layout="column">
+    <md-toolbar layout="row" md-whiteframe="2">
+        <div class="md-toolbar-tools">
+            <breadcrumbs></breadcrumbs>
+        </div>
+    </md-toolbar>
+    <md-content flex layout-padding>
+        <div ui-view></div>
+    </md-content>
+</div>
 
 
-
-<div ui-view></div>
 
 </body>
 </html>
