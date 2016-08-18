@@ -15,12 +15,21 @@ class DetailsComponent {
 
 class DetailsController {
 
-    constructor(itemsStoreService) {
+    constructor(itemsStoreService,$state) {
         this.itemsStoreService = itemsStoreService;
+        this.$state = $state;
     }
+
+
+    edit () {
+        this.$state.go('edit',{ itemId:this.item.index});
+    };
+
 
     delete() {
         this.itemsStoreService.deleteItem(this.item);
+        this.$state.go('dashboard');
+
     };
 
     update(prop, value) {
@@ -29,6 +38,6 @@ class DetailsController {
 
 };
 
-DetailsController.$inject = ['itemsStoreService'];
+DetailsController.$inject = ['itemsStoreService','$state'];
 
 export default DetailsComponent;
