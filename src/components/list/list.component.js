@@ -7,18 +7,18 @@ class ListComponent {
 
     constructor() {
         this.template = template;
-        this.controller = ItemListController;
+        this.controller = ListController;
         this.bindings = {
             list: '<'
         };
     }
 }
 
-
-class ItemListController{
+class ListController{
     constructor(){
 
-    }
+
+    };
 
 }
 

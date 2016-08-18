@@ -1,6 +1,6 @@
-<list-item
-        ng-repeat="item in $ctrl.list"
-        item="item"
-        on-delete="$ctrl.delete(item)"
-        on-update="$ctrl.update(item, prop, value)">
-</list-item>
+<md-list>
+
+    <list-item ng-repeat="item in $ctrl.list"  item="item"></list-item>
+    <md-divider></md-divider>
+
+</md-list>

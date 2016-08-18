@@ -7,6 +7,7 @@ class ListItemComponent {
     constructor(){
         this.template = template;
         this.controller = ListItemController;
+        this.transclude = true;
         this.bindings = {
             item: '<'
         };
@@ -17,9 +18,22 @@ class ListItemComponent {
 
 class ListItemController{
 
-    constructor(itemsStoreService) {
-        this.itemsStoreService = itemsStoreService;
-    }
+    constructor($state , itemsStoreService) {
+
+        this.$state = $state;
+
+        this.itemsStoreService = itemsStoreService
+
+    };
+
+    details () {
+        this.$state.go('details',{ itemId:this.item.index});
+    };
+
+    edit () {
+        this.$state.go('edit',{ itemId:this.item.index});
+    };
+
 
     delete() {
         this.itemsStoreService.deleteItem(this.item);
@@ -31,7 +45,7 @@ class ListItemController{
 
 };
 
-ListItemController.$inject = ['itemsStoreService'];
+ListItemController.$inject = ['$state','itemsStoreService'];
 
 
 export default ListItemComponent;
