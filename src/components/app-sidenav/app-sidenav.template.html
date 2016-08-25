@@ -1,13 +1,23 @@
-<md-sidenav  md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left" md-whiteframe="4" md-component-id="left" >
-    <md-content>
-        <header>
-            <h1>Angular Starter App</h1>
-        </header>
+<md-sidenav  md-is-locked-open="$mdMedia('gt-md')" class="app-sidenav md-sidenav-left" md-whiteframe="4" md-component-id="left" >
 
+    <header class="app-sidenav-header">
 
-            <p> Example</p>
+        <div class="app-isotype" layout="row" layout-align="center center">
+            <md-icon aria-label="App Icon" >
+                <ng-md-icon icon="now_widgets" size="128"></ng-md-icon>
+            </md-icon>
+        </div>
 
+        <h1 class="app-logotype md-heading">Angular Starter App</h1>
+     </header>
+
+    <md-content role="navigation">
+        <ul class="app-menu">
+            <li> <md-button ui-sref="dashboard"> Items </md-button></li>
+            <li> <md-button > Other Items </md-button></li>
+        </ul>
     </md-content>
+
 </md-sidenav>
 
 

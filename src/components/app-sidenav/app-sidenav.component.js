@@ -1,6 +1,7 @@
 'use strict'
 
 import template from './app-sidenav.template.html';
+import './app-sidenav.styles.css';
 
 class AppSidenavComponent {
     constructor(){

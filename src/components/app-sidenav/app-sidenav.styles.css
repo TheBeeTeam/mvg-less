@@ -1,0 +1,121 @@
+.app-sidenav {
+    background: #106CC8;
+}
+
+.app-sidenav,
+.app-sidenav.md-locked-open-add-active,
+.app-sidenav.md-locked-open {
+    width:     272px;
+    min-width: 272px;
+    max-width: 272px;
+}
+.app-sidenav > * {
+    min-width: 218px;
+}
+
+
+.app-sidenav-header {
+    background-color: #106CC8;
+    background: linear-gradient(#185694, #106cc8);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #185694), color-stop(1, #106cc8));
+    background: -webkit-linear-gradient(top, #185694 0%, #106cc8 100%);
+    background: -moz-linear-gradient(top, #185694 0%, #106cc8 100%);
+    background: linear-gradient(top, #185694 0%, #106cc8 100%);
+    border-bottom: 1px solid #267ED5;
+    flex-shrink: 0;
+    z-index: 2;
+
+}
+
+.app-sidenav md-content {
+    background: transparent;
+    color:white;
+}
+
+.app-isotype {
+    min-height: 100px;
+    text-align: center;
+    margin-top: 10px!important;
+
+}
+
+.app-isotype > md-icon{
+    color:white;
+    height: 128px;
+    width: 128px;
+}
+
+
+.app-logotype {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 0px!important;
+
+}
+
+/* Provide some layout/padding enhancements for mobile/small devices */
+@media(max-width: 500px) {
+    /* Reduce the size of the nav logo/header */
+    .app-logotype {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+}
+
+
+.app-menu,
+.app-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.app-menu li {
+    margin: 0;
+}
+.app-menu > li:nth-child(1) {
+    border-top: none;
+}
+
+.app-menu > li {
+    border-bottom: 1px solid #267ED5;
+}
+
+.app-menu .md-button {
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    align-items: inherit;
+    line-height: 40px;
+    margin: 0;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0px 16px;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    width: 100%;
+}
+
+html[dir=rtl] .app-menu .md-button,
+body[dir=rtl] .app-menu .md-button {
+    unicode-bidi: embed;
+    text-align: right;
+}
+
+
+.app-menu .md-button:hover,
+.app-menu .md-button:focus {
+    background: #267ED5 !important;
+}
+.app-menu .md-button md-icon {
+    color: white;
+}
+
+.app-menu .md-button.active {
+    background: #267ED5;
+}
