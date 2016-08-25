@@ -1,6 +1,11 @@
-<div ng-if="$ctrl.itemDetailsActive">
-    <a ui-sref="dashboard">Items</a> <span> > {{$ctrl.itemDetailsActive.name}} </span>
-</div>
-<div ng-if="!$ctrl.itemDetailsActive">
-    <span>Items</span>
-</div>
+<h2 class="md-toolbar-item app-breadcrumb md-headline">
+
+    <a ui-sref="dashboard"> Items </a>
+
+    <span ng-if="$ctrl.itemDetailsActive" class="app-animate-if" flex>
+            <md-icon><ng-md-icon icon="chevron_right" ></ng-md-icon></md-icon>
+            <span> {{$ctrl.itemDetailsActive.name}} </span>
+    </span>
+</h2>
+
+

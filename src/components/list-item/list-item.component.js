@@ -7,7 +7,6 @@ class ListItemComponent {
     constructor(){
         this.template = template;
         this.controller = ListItemController;
-        this.transclude = true;
         this.bindings = {
             item: '<'
         };

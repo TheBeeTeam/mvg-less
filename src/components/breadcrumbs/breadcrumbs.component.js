@@ -1,6 +1,7 @@
 'use strict';
 
 import template from './breadcrumbs.template.html';
+import './breadcrumbs.styles.css'
 
 class BreadcrumbsComponent {
     constructor() {

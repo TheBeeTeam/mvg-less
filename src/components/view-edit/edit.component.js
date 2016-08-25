@@ -15,8 +15,9 @@ class EditComponent {
 
 class EditController {
 
-    constructor(itemsStoreService) {
+    constructor(itemsStoreService,$state) {
         this.itemsStoreService = itemsStoreService;
+        this.$state = $state;
 
         this.model = JSON.parse(JSON.stringify(this.item));
 
@@ -28,11 +29,13 @@ class EditController {
 
     update() {
         this.itemsStoreService.updateItem(this.item,this.model);
+        this.$state.go('details',{ itemId:this.item.index});
+
 
     };
 
 };
 
-EditController.$inject = ['itemsStoreService'];
+EditController.$inject = ['itemsStoreService','$state'];
 
 export default EditComponent;

@@ -1,10 +1,34 @@
-<div>
-    <span> Editing: {{$ctrl.item.name}} </span>
-    <hr>
-    <form novalidate class="edit-form">
-        Name: <input type="text" ng-model="$ctrl.model.name" /><br />
-        Address: <input type="text" ng-model="$ctrl.model.address" /><br />
-        <input type="button" ng-click="$ctrl.reset()" value="Reset" />
-        <input type="submit" ng-click="$ctrl.update()" value="Save" ui-sref="details({ itemId:{{$ctrl.item.index}} })"/>
-    </form>
+<div layout="column" layout-padding>
+    <md-content class="md-no-momentum">
+        <h1> {{$ctrl.item.name}} </h1>
+        <br/>
+        <form name="projectForm">
+        <md-input-container class="md-icon-float md-block">
+            <!-- Use floating label instead of placeholder -->
+            <label>Name</label>
+            <md-icon><ng-md-icon icon="person" ></ng-md-icon></md-icon>
+            <input ng-model="$ctrl.model.name" type="text">
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+            <label>Phone</label>
+            <md-icon><ng-md-icon icon="phone" ></ng-md-icon></md-icon>
+            <input ng-model="$ctrl.model.phone" type="text" placeholder="Phone Number">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <!-- Use floating placeholder instead of label -->
+            <md-icon><ng-md-icon icon="email" ></ng-md-icon></md-icon>
+            <input ng-model="$ctrl.model.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+            <input ng-model="$ctrl.model.address" type="text" placeholder="Address" >
+            <md-icon style="display:inline-block;"> <ng-md-icon icon="place" ></ng-md-icon> </md-icon>
+        </md-input-container>
+            <div>
+                <md-button class="md-raised" ng-click="$ctrl.reset()" >Reset</md-button>
+                <md-button class="md-raised md-primary" type="submit" ng-click="$ctrl.update()">Update</md-button>
+            </div>
+
+        </form>
+    </md-content>
+
 </div>
