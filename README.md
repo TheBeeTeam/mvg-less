@@ -1,5 +1,5 @@
 # Angular-ES6-project
-Angular 1.x Example project 
+Angular 1.x Example project
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ npm install
 
 ### Create a Bundle for the Application
 
-This project use [webpack](https://github.com/webpack/webpack) for creating a bundle of the application and its dependencies
+This project uses [webpack](https://github.com/webpack/webpack) for creating a bundle of the application and its dependencies
 
 We have pre-configured `npm` to automatically run `webpack` so we can simply do:
 
@@ -63,3 +63,16 @@ npm start
 ```
 
 Now browse to the app at `http://localhost:8000/index.html`.
+
+### Development Server
+
+This project uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to serve the page during development.
+
+To run, the command is:
+
+```
+npm run dev
+```
+
+and navigate to `http://localhost:8080/webpack-dev-server/`
+
