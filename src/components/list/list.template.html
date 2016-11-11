@@ -1,7 +1,15 @@
 
-<div flex-xs flex-gt-xs="100" layout="column">
+<md-content class="" layout-xs="column" layout="row">
 
-    <list-item ng-repeat="item in $ctrl.list"  item="item"></list-item>
+      <div flex-xs flex-gt-xs="50" layout="column">
 
-</div>
+        <list-item ng-repeat="item in $ctrl.list.slice(0, $ctrl.list.length/2)"  item="item">1</list-item>
 
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+
+        <list-item ng-repeat="item in $ctrl.list.slice($ctrl.list.length/2, $ctrl.list.length)"  item="item">2</list-item>
+
+    </div>
+
+</md-content>
